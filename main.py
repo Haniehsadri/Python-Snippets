@@ -71,36 +71,110 @@ is_male = True
 is_tall = True
 if is_male or is_tall:
     print("you are tall and man")
-elif is_tall and not(is_male):
+elif is_tall and not (is_male):
     print("you are tall but you are not man")
 else:
     print("you are neither tall or man ")
 
 
-def max(num1,num2,num3):
+def max(num1, num2, num3):
     max = num1
     if num2 > num1:
         max = num2
-    elif num2>num3:
-        max=num3
+    elif num2 > num3:
+        max = num3
     return max
-print(max(1,6,3))
 
-num1 =float(input("enter number 1: "))
-op =input("enter operator: ")
-num2 =float(input("enter number 2: "))
 
-def calculator(num1,num2,op):
-   if op=="+":
-    return num1+num2
-   elif o p=="*":
-    return num1*num2
-   elif op=="-":
-       return  abs(num2-num1)
-print(calculator(num1,num2,op))
-hani={"hani":"hanieh","armani":"arman",}
+print(max(1, 6, 3))
+
+num1 = float(input("enter number 1: "))
+op = input("enter operator: ")
+num2 = float(input("enter number 2: "))
+
+
+def calculator(num1, num2, op):
+    if op == "+":
+        return num1 + num2
+    elif op == "*":
+        return num1 * num2
+    elif op == "-":
+        return abs(num2 - num1)
+
+
+print(calculator(num1, num2, op))
+hani = {"hani": "hanieh", "armani": "arman", }
 print(hani["hani"])
+i = 1
+while i <= 10:
+    print("i:" + str(i))
+    i = int(input("enter the i:"))
+print("loop done")
+secret_world = "giraffe"
+guess = ""
+guesslimits = 3
+gueesscount = 0
+outofgame = False
+while guess != secret_world:
+    if gueesscount < guesslimits:
+        guess = input("enter your guess:")
+        gueesscount += 1
+    else:
+        outofgame = True
+
+if outofgame == True:
+    print("you passed the limit, you lose")
+else:
+    print("you win")
+for letter in "gira":
+    print(letter)
+friens = ["hani", "arman", "sadri ", "yousef"]
+for friend in friens:
+    print(friend)
+for index in range(10):
+    print(index)
 
 
+def raisetopower(base, power):
+    result = 1
+    for power in range(power):
+        result = result * base
+    return result
 
 
+print(raisetopower(2, 3))
+grades = [[1, 2, 3], [2, 3, 4]]
+for row in grades:
+    for column in row:
+        print(column)
+
+
+def translate(phrase):
+    tranlation = ""
+    for letter in phrase:
+        if letter in "AEIOUaeiou":
+            tranlation = tranlation + "g"
+        else:
+            tranlation = tranlation + letter
+
+    return tranlation
+
+
+print(translate("Hanieh"))
+
+
+def translate2(phrase):
+    tranlation = ""
+    for letter in phrase:
+        if letter.lower() in  "aeiou":
+            if letter.isupper():
+                tranlation=tranlation+"G"
+            else:
+                tranlation = tranlation + "g"
+        else:
+            tranlation = tranlation + letter
+
+    return tranlation
+
+input=input("enter your world for translation: " )
+print(translate2(input))
