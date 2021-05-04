@@ -166,9 +166,9 @@ print(translate("Hanieh"))
 def translate2(phrase):
     tranlation = ""
     for letter in phrase:
-        if letter.lower() in  "aeiou":
+        if letter.lower() in "aeiou":
             if letter.isupper():
-                tranlation=tranlation+"G"
+                tranlation = tranlation + "G"
             else:
                 tranlation = tranlation + "g"
         else:
@@ -176,5 +176,39 @@ def translate2(phrase):
 
     return tranlation
 
-input=input("enter your world for translation: " )
-print(translate2(input))
+
+aa = input("enter your world for translation: ")
+print(translate2(aa))
+from Student import Student
+
+student1 = Student("hanieh", "sadri", "masters", 20)
+student2 = Student("Arman", "yousezadeh", "masters", 20)
+students = []
+students.append(student1)
+students.append(student2)
+for s in students:
+    if s.lastname == "sadri":
+        print("welcome Hanieh")
+    if s.lastname == "yousezadeh":
+        print("welcome Arman ")
+
+# multiple quiz
+question_prompts = ["what is the answer of x in this equation? 2x=6 (a) 4 (b) 2  (c)3",
+                    "where is the biggest country in the world? (a) Canada (B)America (c)russia"
+                    ]
+from Question import Question
+
+questions = [Question(question_prompts[0], "c"), Question(question_prompts[1], "c")]
+
+
+# khod payton mifahme k q list yani . ro ke mizani onja mifahme
+def run_test(questions):
+    score = 0
+    for question in questions:
+        answer = input(question.prompt)
+        if answer == question.answer:
+            score += 1
+    print(score)
+
+
+run_test(questions)
