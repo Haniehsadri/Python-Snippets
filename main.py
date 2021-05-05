@@ -181,8 +181,12 @@ aa = input("enter your world for translation: ")
 print(translate2(aa))
 from Student import Student
 
-student1 = Student("hanieh", "sadri", "masters", 20)
-student2 = Student("Arman", "yousezadeh", "masters", 20)
+student1 = Student("hanieh", "sadri", "masters", 3.72)
+student2 = Student("Arman", "yousezadeh", "masters", 3.68)
+print(student1.on_honor_roll())
+from HaniehStudent import  HaniehStudent
+student3=HaniehStudent("hanie","sadri","maths",3.72,23)
+student3.on_honor_roll()
 students = []
 students.append(student1)
 students.append(student2)
