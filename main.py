@@ -1,3 +1,5 @@
+import documents as documents
+
 print("Hello world")
 print("   /|")
 print("  / |")
@@ -184,8 +186,9 @@ from Student import Student
 student1 = Student("hanieh", "sadri", "masters", 3.72)
 student2 = Student("Arman", "yousezadeh", "masters", 3.68)
 print(student1.on_honor_roll())
-from HaniehStudent import  HaniehStudent
-student3=HaniehStudent("hanie","sadri","maths",3.72,23)
+from HaniehStudent import HaniehStudent
+
+student3 = HaniehStudent("hanie", "sadri", "maths", 3.72, 23)
 student3.on_honor_roll()
 students = []
 students.append(student1)
@@ -214,5 +217,25 @@ def run_test(questions):
             score += 1
     print(score)
 
-
 run_test(questions)
+
+try:
+    numberr = int(input("enter number:"))
+except ZeroDivisionError:
+    print("zerodividionerror")
+except ValueError:
+    print("invalidvalue")
+#documents=open("doocument","r")
+#documentsarray=documents.readlines()
+#for document in documentsarray:
+  #  print(document)
+documents2=open("doocument","r+")
+line=input("enter namr and career ")
+documents2.write("\n"+line)
+
+documents2=open("doocument","r+")
+documentsarray=documents2.readlines()
+for document in documentsarray:
+   print(document)
+
+
